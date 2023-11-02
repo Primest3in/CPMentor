@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".showCommentsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#122449">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/comment_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#122449"
+            android:elevation="4dp"
+            app:titleTextColor="#FFFFFF" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/rel"
+            android:layout_below="@id/comment_toolbar"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:id="@+id/proImg_id"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/man"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/proImg_id"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Mahbub Hasan"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/posted_topic_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=": topic"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/posted_date_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11 hrs"
+                        android:textColor="@color/grey"
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_layout"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Hello world"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <View
+                android:id="@+id/vvv"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/light_grey"
+                android:layout_below="@id/tvStatus"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_below="@id/vvv"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:layout_below="@id/vvv">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="90"
+                    android:text="+0"
+                    android:textSize="18sp"
+                    android:id="@+id/up_cntOnPost_comment"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:textColor="#2AF407"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/answer11"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="0"
+                    android:id="@+id/answer_cnt_00"
+                    android:textSize="18sp"
+                    android:textColor="@color/dark_grey"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lll"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:layout_below="@id/rel"
+            android:background="#122449"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/answer11" />
+
+            <TextView
+                android:id="@+id/answer_cnt_11"
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Answers(0)"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_write_comment_id"
+            android:layout_below="@id/lll"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="7dp" />
+
+        <LinearLayout
+            android:id="@+id/bottom_write_comment_id"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/comment_dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/man"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/comment_editText"
+                android:layout_width="309dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/round_bg"
+                android:backgroundTint="@color/light_grey"
+                android:hint="write your answer"
+                android:maxLength="200"
+                android:padding="10dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/dark_grey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/send_image_id"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/send" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

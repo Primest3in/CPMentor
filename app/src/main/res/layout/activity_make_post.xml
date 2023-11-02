@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MakePostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="#FFFFFF"
+        app:title="Write"
+        app:titleTextColor="#FFFFFF" />
+
+    <ImageView
+        tools:ignore="ContentDescription"
+        android:id="@+id/askByImg"
+        android:layout_width="50dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/man"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_toolbar" />
+
+    <TextView
+        android:id="@+id/askByName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#B9000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/askByImg"
+        app:layout_constraintTop_toBottomOf="@+id/post_toolbar" />
+
+    <Spinner
+        android:id="@+id/topic_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#122449"
+        android:entries="@array/topics"
+        android:popupBackground="#122449"
+        app:layout_constraintStart_toEndOf="@+id/askByImg"
+        app:layout_constraintTop_toBottomOf="@+id/askByName" />
+
+    <EditText
+        android:id="@+id/post_edit_text_id"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_input"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/whats_on_mind"
+        android:inputType="textMultiLine"
+        android:textColor="#EB000000"
+        android:textColorHint="#85000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topic_spinner" />
+
+    <ImageView
+        android:id="@+id/gallery_img_view"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:layout_marginBottom="68dp"
+        android:fitsSystemWindows="false"
+        android:src="@drawable/gallery_img"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_edit_text_id"
+        app:layout_constraintVertical_bias="0.636" />
+
+    <Button
+        android:id="@+id/toolbar_button"
+        android:layout_width="80dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="4dp"
+        android:text="Post"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/post_toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/post_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/choseImg_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_toolbar"
+        app:srcCompat="@drawable/gallery_img" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

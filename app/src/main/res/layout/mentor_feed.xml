@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="2dp"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Lout"
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/mentor_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/man"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mentor_name"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Mahbubul Hasan"
+                        android:textSize="22sp"/>
+
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:text="contact: hasanamahbub331@gmail.com"
+                    android:id="@+id/mentor_email"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_grey"
+                    android:id="@+id/cf_handle"
+                    android:text="CF: _mahbub_"
+                    android:textSize="15sp"/>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/dark_grey"
+                       android:layout_marginRight="5dp"
+                       android:text="see blogs"/>
+                   <ImageView
+                       android:layout_gravity="center|bottom"
+                       android:layout_width="18dp"
+                       android:layout_height="18dp"
+                       android:src="@drawable/next"/>
+
+
+               </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
