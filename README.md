@@ -1,7 +1,7 @@
 # CPMentor
  
-CP mentor is an Android application built for the programming community for learning by helping each other. A programmer can asks doubt here in cp mentor, and those who knows the answer can help them. Additionally, you can keep track of upcoming Codeforces contests to plan your schedule effectively.
-
+CP mentor is an Android application developed for the programming community where a programmer can ask and solve their doubts. Additionally, you can keep track of upcoming Codeforces contests to plan your schedule effectively.
+** Login Activity: **
 ![1](https://github.com/Primest3in/CPMentor/assets/52739974/b524ebc8-13b1-46d9-b2a7-1b61a8fbc67c)
 ![2](https://github.com/Primest3in/CPMentor/assets/52739974/37f68cf4-295f-42d0-bf9c-ef888a1467c9)
 ![3](https://github.com/Primest3in/CPMentor/assets/52739974/8c4aee71-51b4-437d-b8d0-59ed40c2c332)
